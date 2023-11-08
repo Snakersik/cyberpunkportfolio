@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Audiowide", sans-serif;
+  color: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    "Audiowide" "Courier New", monospace;
+}
+
+.App {
+  background-color: #091833;
+  overflow: hidden;
+}
+
+h1 {
+  line-height: 0;
+  font-size: 64px;
+  padding-top: 35px;
+}
+
+h2 {
+  line-height: 0;
+  font-size: 52px;
+}
+
+h3 {
+  font-size: 42px;
+  line-height: 0;
+  font-size: 42px;
+  font-weight: 400;
+}
+
+p {
+  font-family: "VT323", monospace;
+  font-size: 22px;
+}
+
+.aboutP {
+  max-width: 1000px;
+}
+
+.gradient {
+  margin: 0;
+  line-height: normal;
+  background: linear-gradient(270deg, #ea00d9 0%, #0abdc6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}
+
+.HeroContainer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-left: 170px;
+
+  flex-direction: column;
+}
+
+svg {
+  padding-top: 100px;
+  cursor: pointer;
+}
+
+#blob1 {
+  transform: translateY(-150%);
+}
+
+#blob2 {
+  position: absolute;
+  right: 25%;
+  top: 50%;
+  transform: translate(100%, -50%);
+}
+
+#blob3 {
+  transform: translateY(200%);
+}
+
+.blobRose {
+  overflow: hidden;
+  position: absolute;
+  width: 209px;
+  height: 200px;
+  flex-shrink: 0;
+  background-color: #ea00d9;
+  filter: blur(250px) drop-shadow(0px 4px 4px #ea00d9);
+}
+
+.blobBlue {
+  overflow: hidden;
+  position: absolute;
+  width: 209px;
+  height: 250px;
+  flex-shrink: 0;
+  background-color: #0abdc6;
+
+  filter: blur(200px) drop-shadow(0px 4px 4px #ea00d9);
+}
+#my-svg:hover {
+  transition: transform 0.5s;
+  transform: scale(1.02);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding-bottom: 500px;
+  position: relative;
+}
+
+.aboutMeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.StackItem {
+  box-shadow: 0px 0px 10px 0px #711c91;
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(to right, #ea00d9, #0abdc6);
+  font-size: 26px;
+}
+
+.AllStack {
+  max-width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 30px;
+}
+.StackList {
+  display: flex;
+  justify-content: space-evenly;
+
+  gap: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  #blob2 {
+    right: 50%;
+  }
+  h1 {
+    font-size: 76px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  .AllStack {
+    max-width: 600px;
+  }
+  h3 {
+    font-size: 52px;
+  }
+
+  p {
+    font-size: 28px;
+  }
+  .aboutP {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .HeroContainer {
+    padding-left: 20px;
+  }
+  h1 {
+    font-size: 52px;
+    padding-top: 25px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+  svg {
+    padding-top: 65px;
+  }
+  .blobRose {
+    width: 100px;
+    filter: blur(100px);
+  }
+  #blob2 {
+    right: 0;
+  }
+  #blob1 {
+    width: 150px;
+    filter: blur(150px);
+  }
+  #blob4 {
+    width: 200px;
+    filter: blur(150px);
+  }
+  .aboutP {
+    max-width: 80vw;
+  }
+  h3 {
+    font-size: 32px;
+  }
+  .StackItem {
+    font-size: 20px;
+  }
+  .StackList {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .HeroContainer {
+    padding-left: 10px;
+  }
+  h1 {
+    font-size: 40px;
+    padding-top: 15px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  svg {
+    width: 250px;
+    height: 70px;
+    padding-top: 45px;
+  }
+  p {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .AllStack {
+    padding-top: 20px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .HeroContainer {
+    padding-left: 10px;
+  }
+  h1 {
+    font-size: 26px;
+    padding-top: 15px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  svg {
+    width: 200px;
+    height: 50px;
+    padding-top: 45px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .AllStack {
+    max-width: 300px;
+  }
+  .StackList {
+    gap: 40px;
+  }
+  .StackItem {
+    font-size: 16px;
+  }
+}
