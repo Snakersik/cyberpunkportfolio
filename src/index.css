@@ -30,7 +30,12 @@ h2 {
 h3 {
   font-size: 42px;
   line-height: 0;
-  font-size: 42px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 30px;
+  font-style: normal;
   font-weight: 400;
 }
 
@@ -64,7 +69,7 @@ p {
 }
 
 svg {
-  padding-top: 100px;
+  padding-top: 80px;
   cursor: pointer;
 }
 
@@ -114,7 +119,7 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 100px;
-  padding-bottom: 500px;
+  padding-bottom: 200px;
   position: relative;
 }
 
@@ -145,9 +150,45 @@ svg {
 }
 .StackList {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   gap: 100px;
+}
+
+#SectionTitle {
+  padding-bottom: 50px;
+}
+
+.ProjectsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  align-items: center;
+}
+
+.ProjectDescribtionContainer {
+  max-width: 550px;
+}
+
+.ProjectDescribtionContainer svg {
+  padding-top: 0;
+  width: 220px;
+}
+
+.ProjectItemContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 200px;
+  align-items: center;
+}
+
+.ProjectImage {
+  width: 545px;
+  height: 344px;
+  border-radius: 10px;
+  opacity: 50%;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1440px) {
@@ -216,8 +257,21 @@ svg {
   .StackList {
     flex-direction: column;
   }
+  .ProjectItemContainer {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #SectionTitle {
+    padding-bottom: 20px;
+  }
 }
 @media screen and (max-width: 650px) {
+  .ProjectsSection {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .HeroContainer {
     padding-left: 10px;
   }
@@ -239,9 +293,20 @@ svg {
   h3 {
     font-size: 30px;
   }
+
+  h4 {
+    font-size: 26px;
+  }
   .AllStack {
     padding-top: 20px;
     gap: 15px;
+  }
+  .ProjectImage {
+    width: 90vw;
+    height: 260px;
+  }
+  .ProjectDescribtionContainer svg {
+    width: 160px;
   }
 }
 
@@ -257,7 +322,10 @@ svg {
     font-size: 24px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 21px;
   }
   svg {
     width: 200px;
