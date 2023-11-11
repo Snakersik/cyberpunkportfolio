@@ -43,6 +43,52 @@ p {
   font-family: "VT323", monospace;
   font-size: 22px;
 }
+.navContainer {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  align-items: center;
+  z-index: 999;
+  background: transparent;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+.nav i {
+  display: none;
+  cursor: pointer;
+  z-index: 999;
+}
+.linkHover {
+  transition: color 0.5s;
+}
+
+.linkHover:hover {
+  color: rgb(27, 27, 27);
+}
+
+.NavBarElement {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.NavBarElementFirst {
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 999;
+}
 
 .aboutP {
   max-width: 1000px;
@@ -71,6 +117,11 @@ p {
 svg {
   padding-top: 80px;
   cursor: pointer;
+  outline: none;
+}
+
+svg:active {
+  outline: inherit;
 }
 
 #blob1 {
@@ -85,7 +136,12 @@ svg {
 }
 
 #blob3 {
-  transform: translateY(200%);
+  transform: translateY(150%);
+}
+
+#blob4 {
+  right: 25%;
+  top: 20%;
 }
 
 .blobRose {
@@ -106,7 +162,7 @@ svg {
   flex-shrink: 0;
   background-color: #0abdc6;
 
-  filter: blur(200px) drop-shadow(0px 4px 4px #ea00d9);
+  filter: blur(180px) drop-shadow(0px 4px 4px #ea00d9);
 }
 #my-svg:hover {
   transition: transform 0.5s;
@@ -119,8 +175,11 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   position: relative;
+  padding-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .aboutMeContainer {
@@ -163,6 +222,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding-top: 50px;
 
   align-items: center;
 }
@@ -189,6 +249,123 @@ svg {
   border-radius: 10px;
   opacity: 50%;
   background-size: cover;
+  background-position: top(50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ContactSection {
+  padding: 50px 50px 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.ContactSection > div > h3 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:after {
+  box-shadow: 0 0 0 1px #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff;
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 400 14px "Audiowide", sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 1440px) {
@@ -216,7 +393,26 @@ svg {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1439px) {
+  .ProjectItemContainer {
+    gap: 60px;
+  }
+  .ProjectImage {
+    width: 40vw;
+  }
+  .ProjectDescribtionContainer {
+    max-width: 450px;
+  }
+  .StackList {
+    flex-direction: column;
+  }
+
+  .AllStack {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
   .HeroContainer {
     padding-left: 20px;
   }
@@ -263,17 +459,70 @@ svg {
     justify-content: center;
     align-items: center;
   }
+  .ProjectImage {
+    width: 100%;
+    height: 300px;
+  }
+  .ProjectDescribtionContainer {
+    max-width: 600px;
+  }
   #SectionTitle {
     padding-bottom: 20px;
   }
 }
 @media screen and (max-width: 650px) {
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 998;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.5s ease, slideOut 0.5s ease forwards;
+    transition: opacity 0.5s;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .nav i {
+    display: block;
+  }
+
   .ProjectsSection {
     padding-left: 10px;
     padding-right: 10px;
+    gap: 70px;
   }
   .HeroContainer {
-    padding-left: 10px;
+    align-items: center;
   }
   h1 {
     font-size: 40px;

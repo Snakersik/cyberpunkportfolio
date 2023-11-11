@@ -9,7 +9,9 @@ const techStackList = [
   "Github",
   "Rest API",
   "Wordpress",
-  "Azure Static Wen App",
+  "Azure Static Web App",
+  "Postman",
+  "npm",
 ];
 
 const designStackList = ["Figma", "Photoshop", "Canva"];
