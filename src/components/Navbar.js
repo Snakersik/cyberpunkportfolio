@@ -45,12 +45,12 @@ const Navbar = () => {
         }
       >
         <Scroll
+          onClick={isSmallScreen ? (NavView ? Navshow : "") : ""}
           className="NavBarElementFirst linkHover"
           to="HeroContainer"
           spy={true}
           smooth={true}
           duration={500}
-          onClick={isSmallScreen ? Navshow : undefined}
         >
           Konrad Tratwal
         </Scroll>
