@@ -1,1 +1,1 @@
-Konrad Tratwal portfolio have fun reading
+Konrad Tratwal portfolio
